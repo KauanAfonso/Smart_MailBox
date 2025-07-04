@@ -1,0 +1,1 @@
+// Esse arquivo define os endpoints da aplicação, ou seja, as rotas que serão acessadas pelo cliente.
