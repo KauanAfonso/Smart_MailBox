@@ -5,6 +5,7 @@
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
   },
+  "type": "module",
   "name": "backend",
   "version": "1.0.0",
   "main": "Server.js",
@@ -17,3 +18,4 @@
   "license": "ISC",
   "description": ""
 }
+
