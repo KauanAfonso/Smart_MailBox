@@ -1,10 +1,11 @@
 // Esse arquivo define os endpoints da aplicação, ou seja, as rotas que serão acessadas pelo cliente.
 import { Router } from "express";
-import createLetter  from "../controllers/LetterControllers.js";
+import letterController from '../controllers/LetterControllers.js'; // IMPORTAÇÃO DEFAULT
 
 const routeLetter = Router();
 
-routeLetter.post("/letters", createLetter);
+routeLetter.post("/letters", letterController.createLetter);
+routeLetter.get("/letters", letterController.show_mailbox);
 
 
 export default routeLetter;

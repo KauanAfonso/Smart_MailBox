@@ -29,4 +29,21 @@ const createLetter = async(req,res) =>{
     }
 }
 
-export default createLetter;
+// Função para mostrar todas as cartas na caixa de entrada
+// Essa função busca todas as cartas no banco de dados e retorna uma resposta JSON com as cartas
+const show_mailbox = async (req, res)=>{
+    try{
+        const letters = await LetterModel.findAll();
+        res.status(200).json({
+            message: "Cartas encontradas com sucesso",
+            letters: letters
+        });
+    }catch(error){
+        res.status(500).json({
+            message: "Erro de servidor",
+            error: error.message
+        });
+    }
+}
+
+export default {createLetter, show_mailbox};
