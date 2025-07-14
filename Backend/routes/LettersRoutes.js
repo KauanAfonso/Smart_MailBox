@@ -9,7 +9,7 @@ const routeLetter = Router();
 routeLetter.post("/letters", letterController.createLetter);
 routeLetter.get("/letters", letterController.show_mailbox);
 routeLetter.put("/letters/:id", letterController.updateLetter);
-routeLetter.delete("/letters/:id", letterController.deleteLetter);
+routeLetter.delete("/letters/:id", letterController.delete_letter);
 
 
 export default routeLetter;

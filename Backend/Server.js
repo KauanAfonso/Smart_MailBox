@@ -8,7 +8,10 @@ const app = express();
 app.use(express.json());
 app.use("/api", routeLetter);
 
-app.listen(3000, async()=>{
+const port = process.env.PORT || 3000;
+
+
+app.listen(port, async()=>{
     try {
         await sequelize.authenticate(); // Tenta conectar ao banco de dados
         await sequelize.sync(); // Sincroniza os modelos com o banco de dados
