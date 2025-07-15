@@ -3,8 +3,10 @@
 import sequelize from "./config/db.js";
 import routeLetter from "./routes/LettersRoutes.js";
 import express from "express"; // certo
+import cors from "cors"; // certo
 
 const app = express();
+app.use(cors()); // Habilita o CORS para todas as rotas
 app.use(express.json());
 app.use("/api", routeLetter);
 
