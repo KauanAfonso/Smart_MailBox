@@ -1,10 +1,11 @@
 function LetterCard({ letter, markAsRead }) {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-4 flex flex-col justify-between">
-      <p className="text-lg font-semibold">ID: {letter.id}</p>
+    <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col justify-between">
+      <h3 className="text-2xl font-semibold mb-2">Alerta de carta nova !</h3>
+      <p className="text-lg">ID: {letter.id}</p>
       <p className="text-gray-600">Status: {letter.status}</p>
       <button
-        className="mt-4 bg-green-500 text-white py-2 rounded-xl hover:bg-green-600 transition"
+        className="mt-4 bg-blue-400 text-white py-2 rounded-xl hover:bg-blue-600 transition"
         onClick={() => markAsRead(letter.id)}
       >
         Marcar como lida
@@ -12,4 +13,5 @@ function LetterCard({ letter, markAsRead }) {
     </div>
   );
 }
+
 export default LetterCard;
