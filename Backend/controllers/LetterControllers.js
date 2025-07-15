@@ -31,7 +31,7 @@ const createLetter = async(req,res) =>{
 
 // Função para mostrar todas as cartas na caixa de entrada
 // Essa função busca todas as cartas no banco de dados e retorna uma resposta JSON com as cartas
-const show_mailbox = async (req, res)=>{
+const showMailbox = async (req, res)=>{
     try{
         const letters = await LetterModel.findAll();
         res.status(200).json({
@@ -81,7 +81,7 @@ const updateLetter = async (req, res) =>{
     }
 }
 
-const delete_letter = async (req, res) =>{
+const deleteLetter = async (req, res) =>{
     try{
         const {id} = req.params;
 
@@ -113,4 +113,4 @@ const delete_letter = async (req, res) =>{
 
 
 
-export default {createLetter, show_mailbox , updateLetter, delete_letter};
+export default {createLetter, showMailbox , updateLetter, deleteLetter};
